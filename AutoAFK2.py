@@ -187,37 +187,37 @@ def main() -> None:
         if selection == 1:
             day = afkj.current_time_utc.isoweekday()
             if day == 1:
-                bot.blind_push("push_tower", "light")
+                bot.blind_push("push_tower", False, "light")
             if day == 2:
-                bot.blind_push("push_tower", "mauler")
+                bot.blind_push("push_tower", False, "mauler")
             if day == 3:
-                bot.blind_push("push_tower", "wilder")
+                bot.blind_push("push_tower", False, "wilder")
             if day == 4:
-                bot.blind_push("push_tower", "graveborn")
+                bot.blind_push("push_tower", False, "graveborn")
             if day == 5:
-                bot.blind_push("push_tower", "light")
+                bot.blind_push("push_tower", False, "light")
             if day == 6:
-                bot.blind_push("push_tower", "wilder")
+                bot.blind_push("push_tower", False, "wilder")
             if day == 7:
-                bot.blind_push("push_tower", "light")
+                bot.blind_push("push_tower", False, "light")
 
         if selection == 2:
             day = afkj.current_time_utc.isoweekday()
             if day == 5:
-                bot.blind_push("push_tower", "mauler")
+                bot.blind_push("push_tower", False, "mauler")
             if day == 6:
-                bot.blind_push("push_tower", "graveborn")
+                bot.blind_push("push_tower", False, "graveborn")
             if day == 7:
-                bot.blind_push("push_tower", "wilder")
+                bot.blind_push("push_tower", False, "wilder")
 
         if selection == 3:
             if day == 7:
-                bot.blind_push("push_tower", "graveborn")
+                bot.blind_push("push_tower", False, "graveborn")
 
         if selection == 4:
             day = afkj.current_time_utc.isoweekday()
             if day == 7:
-                bot.blind_push("push_tower", "mauler")
+                bot.blind_push("push_tower", False, "mauler")
 
         if selection == 5:
             SelectionMenu.get_selection(

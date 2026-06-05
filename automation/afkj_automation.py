@@ -1285,6 +1285,9 @@ class AFKJAutomation(EmulatorInteractions):
                 name=inspect.currentframe().f_code.co_name, state="open"
             )
 
+            #self.logger.info("Mode: " + mode)
+            #self.logger.info(" | Running: " + running)
+            #self.logger.info(" | Tower: " + tower + " |\n")
             self.logger.info("Pushing " + tower.capitalize() + " tower!\n")
             self.click_xy(460, 1820, seconds=4)
             self.click("labels/legend_trial", seconds=2)
