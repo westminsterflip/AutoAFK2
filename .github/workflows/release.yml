@@ -42,9 +42,9 @@ jobs:
         cp .\settings.ini .\dist\AutoAFK2\
 
     - name: Zip the dist directory
-      run: Compress-Archive -Path .\dist\AutoAFK2\* -DestinationPath $env:USERPROFILE\Documents\AutoAFK2.zip
+      run: Compress-Archive -Path .\dist\AutoAFK2\* -DestinationPath AutoAFK2.zip
 
-    # - name: Upload the ZIP to the release
-    #   uses: softprops/action-gh-release@v2
-    #   with:
-    #     files: AutoAFK2.zip
+    - name: Upload the ZIP to the release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: AutoAFK2.zip
