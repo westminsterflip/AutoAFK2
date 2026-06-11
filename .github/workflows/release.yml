@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Check out the repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Install pyenv-win
       run: Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
@@ -45,6 +45,6 @@ jobs:
       run: Compress-Archive -Path .\dist\AutoAFK2\* -DestinationPath AutoAFK2.zip
 
     - name: Upload the ZIP to the release
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@v3
       with:
         files: AutoAFK2.zip
