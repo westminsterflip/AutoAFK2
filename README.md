@@ -99,10 +99,10 @@ The bot will attempt to automatically connect to the first found ADB device, but
 
 * **Bluestacks**: Go to Settings → Advanced → Enable ADB, the port is the numbers after the `:`.
 * **LDPlayer**: Settings → Other Settings → ADB Debugging → Open Local connection, the port should be `5555` by default.
-* **MumuPlayer**: Seems ADB is enabled by default on port `7555`.
+* **MumuPlayer**: Seems ADB is enabled by default on port `5555`.
 * **Connected device**: Enable ADB on the device and connect to your computer using a USB cable. If your phone doesn't display a different port, try the default `5555`.
 
-Get the latest [release](https://github.com/Fortigate/AutoAFK2/releases), specify your ADB port in `settings.ini`, and run `AutoAFK2.exe` with (or without) the appropriate launch parameter.
+Get the latest [release](https://github.com/westminsterflip/AutoAFK2/releases), specify your ADB port in `settings.ini`, and run `AutoAFK2.exe` with (or without) the appropriate launch parameter.
 
 ## Windows Native Development Setup
 
@@ -134,6 +134,9 @@ The script `AutoAFK2.py` should now be runnable:
 python AutoAFK2.py
 ```
 
+**-OR-**
+Run build.ps1 which will create an exe in .\build\dist
+
 ## Issues?
 
-Make an issue here or DM me on Discord @ ````Jc.2````
+Make an issue here

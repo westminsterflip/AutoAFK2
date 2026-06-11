@@ -23,7 +23,7 @@ class AFKJMetadata:
         self.formation: int = 1
         self.load_formations: bool = True
         self.stage_defeats: int = 0
-        self.version: str = "3.3.2"
+        self.version: str = "3.3.3"
 
         # Quick storage for commonly used regions
         self.regions: dict[str, tuple[int, int, int, int]] = {

@@ -1326,6 +1326,7 @@ class AFKJAutomation(EmulatorInteractions):
                                         + " win detected, moving to next floor\n"
                                     )
                                     self.metadata.stage_defeats = 0
+                                    self.metadata.formation = 1
                                     self.formation_handler()
                                 if self.is_visible(
                                     "buttons/retry",
@@ -1341,12 +1342,7 @@ class AFKJAutomation(EmulatorInteractions):
                                         % self.config.getint("PUSHING", "defeat_limit")
                                         == 0
                                     ):
-                                        self.metadata.formation = (
-                                            self.metadata.stage_defeats
-                                            / self.config.getint(
-                                                "PUSHING", "defeat_limit"
-                                            )
-                                        ) + 1  # number of defeats / defeat_limit, plus 1 as we start on formation #1
+                                        self.metadata.formation += 1
                                         self.logger.info(
                                             str(self.metadata.stage_defeats)
                                             + " defeats, trying next formation"
@@ -1795,10 +1791,7 @@ class AFKJAutomation(EmulatorInteractions):
                     % self.config.getint("PUSHING", "defeat_limit")
                     == 0
                 ):
-                    self.metadata.formation = (
-                        self.metadata.stage_defeats
-                        / self.config.getint("PUSHING", "defeat_limit")
-                    ) + 1  # number of defeats / defeat_limit, plus 1 as we start on formation #1
+                    self.metadata.formation += 1
                     self.logger.info(
                         str(self.metadata.stage_defeats)
                         + " defeats, trying next formation"

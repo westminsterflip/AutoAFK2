@@ -152,7 +152,7 @@ def main() -> None:
     selection = SelectionMenu.get_selection(
         options,
         title="Welcome to AutoAFK2! Select an activity:",
-        subtitle="Note that to stop a task or start a new one you have to restart the bot. Questions? Jc.2 @ Discord",
+        subtitle="Note that to stop a task or start a new one you have to restart the bot.",
     )
     selection += 1  # Non-zero index to make things easier to read
 
@@ -223,7 +223,7 @@ def main() -> None:
             SelectionMenu.get_selection(
                 options,
                 title="Welcome to AutoAFK2! Select an activity:",
-                subtitle="Note that to stop a task or start a new one you have to restart the bot. Questions? Jc.2 @ Discord",
+                subtitle="Note that to stop a task or start a new one you have to restart the bot.",
             )
             selection += 1  # Non-zero index to make things easier to read
 
