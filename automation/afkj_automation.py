@@ -1139,6 +1139,7 @@ class AFKJAutomation(EmulatorInteractions):
                     "Formation selected higher than 7, starting from 1 again.."
                 )
                 self.metadata.formation = 1
+                formation_number = 1
 
             self.logger.info(
                 "Loading formation #" + str(math.trunc(self.metadata.formation))
@@ -1565,10 +1566,7 @@ class AFKJAutomation(EmulatorInteractions):
                         % self.config.getint("PUSHING", "defeat_limit")
                         == 0
                     ):
-                        self.metadata.formation = (
-                            self.metadata.stage_defeats
-                            / self.config.getint("PUSHING", "defeat_limit")
-                        ) + 1  # number of defeats / defeat_limit, plus 1 as we start on formation #1
+                        self.metadata.formation += 1
                         self.logger.info(
                             str(self.metadata.stage_defeats)
                             + " defeats, trying next formation"
