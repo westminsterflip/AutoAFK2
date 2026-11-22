@@ -1291,6 +1291,7 @@ class AFKJAutomation(EmulatorInteractions):
             self.click_xy(460, 1820, seconds=4)
             #self.click("labels/legend_trial", seconds=2)
             if not self.is_visible("labels/legend_trial", seconds=2, click=True):
+                #swipe function is not working, workaround while I don't feel like looking into that
                 options = ["Continue"]
                 SelectionMenu.get_selection(options, title="Scroll until Legend Trials are visible then select continue")
                 self.click("labels/legend_trial", seconds=2)
