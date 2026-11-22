@@ -8,6 +8,7 @@ from datetime import datetime
 from humanfriendly import format_timespan
 from logging import Logger
 from typing import Any
+from consolemenu import SelectionMenu
 
 from interaction.emulator_interaction import EmulatorInteractions
 
@@ -1288,7 +1289,11 @@ class AFKJAutomation(EmulatorInteractions):
 
             self.logger.info("Pushing " + tower.capitalize() + " tower!\n")
             self.click_xy(460, 1820, seconds=4)
-            self.click("labels/legend_trial", seconds=2)
+            #self.click("labels/legend_trial", seconds=2)
+            if not self.is_visible("labels/legend_trial", seconds=2, click=True):
+                options = ["Continue"]
+                SelectionMenu.get_selection(options, title="Scroll until Legend Trials are visible then select continue")
+                self.click("labels/legend_trial", seconds=2)
 
             factions = ["graveborn", "light", "mauler", "wilder"]
             for faction in factions:
